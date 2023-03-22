@@ -1,0 +1,7 @@
+{
+  "name": "appCurs",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
