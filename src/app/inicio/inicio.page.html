@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>App Curs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card [routerLink]="['/ventasconcierge']">
+    <ion-card-header>
+
+      <ion-card-title>Ventas de Concierge</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img src="https://conciergehotline.net/images/recursos/logo/logo_concierge.svg"></ion-img>
+   
+     
+     <ion-grid>
+      <ion-row>
+        <ion-col> <p>Total hoy:</p></ion-col>
+        <ion-col><ion-badge color="primary" mode="ios">$ <span>42</span> </ion-badge></ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card [routerLink]="['/ventastravel']">
+    <ion-card-header>
+
+      <ion-card-title>Ventas de travel</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img src="https://www.travelvipmiami.com/views/images/logotipo.png"></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
