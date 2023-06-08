@@ -19,6 +19,10 @@ getDatos()
   {
     return this.http.get("https://conciergehotline.net/api/productos?select=*");
   }
+  getReservaciones()
+  {
+    return this.http.get("https://conciergehotline.net/api/reservaciones?select=*");
+  }
 
   postDatos(tabla:string,datos:any)
   {

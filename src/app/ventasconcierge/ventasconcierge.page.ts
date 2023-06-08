@@ -8,14 +8,23 @@ import { ServicioService } from '../servicio.service';
 })
 export class VentasconciergePage implements OnInit {
 
-  constructor(public funciones:ServicioService) { }
+  constructor(public funciones:ServicioService,public servicio:ServicioService) { }
 
-  ngOnInit() {
-  }
+  public ventas:any;
+  async ngOnInit() {
+    
+    this.servicio.getReservaciones()
+    .subscribe((data:any)=>{
+      this.ventas=data.results; 
+      console.log(this.ventas);   
+    })
+      }
 
   navegarA(url:string)
   {
     this.funciones.navegarA(url);
   }
+
+   
 
 }

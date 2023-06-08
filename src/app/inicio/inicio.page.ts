@@ -9,12 +9,19 @@ import { ServicioService } from '../servicio.service';
 export class InicioPage implements OnInit {
 
   constructor(public ser:ServicioService) { }
-  datos:any;
+  public datos:any;
+  public total:string='';
+  
 
  async ngOnInit() {
-this.ser.getDatos()
+this.ser.getReservaciones()
 .subscribe((data:any)=>{
-  console.log(data)
+  this.datos=data;
+ 
+  this.total=data.total;
+  
+
+
   
 })
   }
