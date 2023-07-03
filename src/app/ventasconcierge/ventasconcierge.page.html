@@ -1,14 +1,4 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="inicio"></ion-back-button>
-    </ion-buttons>
-    <ion-title>ventasconcierge</ion-title>
-    <ion-button (click)="navegarA('/ventastravel')" slot="end">
-      <ion-icon name="car-outline"></ion-icon>
-    </ion-button>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Ventas Concierge"></app-header>
 
 <ion-content>
   <ion-list *ngFor="let venta of ventas;">

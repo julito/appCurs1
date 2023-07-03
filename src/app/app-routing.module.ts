@@ -4,12 +4,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'post',
     pathMatch: 'full'
-  },
-  {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
     path: 'productos',
@@ -26,6 +22,18 @@ const routes: Routes = [
   {
     path: 'ventastravel',
     loadChildren: () => import('./ventastravel/ventastravel.module').then( m => m.VentastravelPageModule)
+  },
+  {
+    path: 'detalles',
+    loadChildren: () => import('./detalles/detalles.module').then( m => m.DetallesPageModule)
+  },
+  {
+    path: 'post',
+    loadChildren: () => import('./post/post.module').then( m => m.PostPageModule)
+  },
+  {
+    path: 'listpost',
+    loadChildren: () => import('./listpost/listpost.module').then( m => m.ListpostPageModule)
   }
 ];
 
